@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE | ./a.out
+export HDS=`(echo $CFILE | cut -f 1 -d '.')` | gcc $CFILE -o $HDS | ./$HDS

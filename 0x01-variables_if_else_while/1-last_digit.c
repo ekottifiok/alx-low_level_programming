@@ -16,9 +16,10 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	int lastDigit = n % 10;
+	int lastDigit;
 	char *data;
-
+	
+	lastDigit = n % 10;
 	if (lastDigit > 5)
 		data = "and is greater than 5\n";
 	else if (lastDigit == 0)

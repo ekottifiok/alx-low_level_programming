@@ -11,13 +11,13 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	int n;
+	int lastDigit, n;
+	char *data;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	int lastDigit;
-	char *data;
+
 
 	lastDigit = n % 10;
 	if (lastDigit > 5)

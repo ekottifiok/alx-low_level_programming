@@ -18,7 +18,7 @@ int main(void)
 	/* your code goes there */
 	int lastDigit;
 	char *data;
-	
+
 	lastDigit = n % 10;
 	if (lastDigit > 5)
 		data = "and is greater than 5\n";

@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /* more headers goes there */
 /**
@@ -22,6 +22,7 @@ int print_sign(int n)
 	}
 	else
 	{
+		_putchar(48);
 		return (0);
 	}
 

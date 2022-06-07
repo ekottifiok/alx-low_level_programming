@@ -2,14 +2,13 @@
 
 /* more headers goes there */
 /**
- * main - Entry point
- *
+ * _abs - Entry point
+ * @d: the integer to check
  * Return: Always 0 (Success)
  */
 /* betty style doc for function main goes there */
 
-int main(void)
+int _abs(int d)
 {
-	_putchar("_putchar\n")
-	return (0);
+	return (printf("%d", abs(d)));
 }

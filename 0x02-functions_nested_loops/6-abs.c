@@ -11,7 +11,7 @@
 int _abs(int d)
 {
 	if (d < 0)
-		return (_putchar(-d));
+		return (_putchar(-(d)));
 	return (_putchar(d));
 
 }

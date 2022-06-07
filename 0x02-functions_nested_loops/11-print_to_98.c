@@ -3,13 +3,13 @@
 
 /* more headers goes there */
 /**
- * add - Prints a to z
+ * print_to_98 - Prints a to z
  * @i: integer one
- * @j: integer two
+ * @n: integer two
  * Return: the sum of two values
  */
 
-void print_to_98(int n);
+void print_to_98(int n)
 {
 	int i;
 
@@ -21,7 +21,7 @@ void print_to_98(int n);
 		}
 		_putchar(44);
 		_putchar(32);
-		_putchar(i + '0')
+		_putchar(i + '0');
 	}
-	
+
 }

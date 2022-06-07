@@ -4,7 +4,8 @@
 /* more headers goes there */
 /**
  * add - Prints a to z
- *
+ * @i: integer one
+ * @j: integer two
  * Returns: Nil
  */
 

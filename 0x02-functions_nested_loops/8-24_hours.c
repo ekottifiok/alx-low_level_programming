@@ -3,7 +3,7 @@
 
 /* more headers goes there */
 /**
- * main - Entry point
+ * jack_bauer - Entry point
  *
  * Return: Always 0 (Success)
  */
@@ -24,6 +24,5 @@ void jack_bauer(void)
 			_putchar((j % 10) + '0');
 			_putchar(10);
 		}
-		
 	}
 }

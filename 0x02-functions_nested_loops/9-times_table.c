@@ -18,15 +18,16 @@ void times_table(void)
 		for (j = 0; j < 10; j++)
 		{
 			a = i * j;
-			
+
 			if (a == 0)
-			{	
+			{
 				if (j > 0)
+				{
 					_putchar(32);
 					_putchar(44);
+				}
 				_putchar('0');
-				
-					
+
 			}
 			else if (a > 9)
 			{
@@ -44,7 +45,7 @@ void times_table(void)
 			}
 			else
 				_putchar(67);
-			
+
 		}
 		_putchar(10);
 	}

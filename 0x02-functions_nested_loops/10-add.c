@@ -6,7 +6,7 @@
  * add - Prints a to z
  * @i: integer one
  * @j: integer two
- * Returns: Nil
+ * Return: the sum of two values
  */
 
 int add(int i, int j)

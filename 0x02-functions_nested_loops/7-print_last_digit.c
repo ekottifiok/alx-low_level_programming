@@ -10,5 +10,5 @@
 
 int print_last_digit(int d);
 {
-	return (printf("%d", abs(d % 10)));
+	return (d % 10);
 }

@@ -28,9 +28,7 @@ void print_to_98(int n)
 			{	_putchar(44);
 				_putchar(32);
 				if (n > 9)
-				{
 					_putchar((n / 10) + '0');
-				}
 				_putchar((n % 10) + '0');
 			}
 		}
@@ -71,10 +69,8 @@ void print_to_98(int n)
 		}
 	}
 	else
-	{
 		if (n > 9)
 			_putchar((n / 10) + '0');
 		_putchar((n % 10) + '0');
-	}
 	_putchar(10);
 }

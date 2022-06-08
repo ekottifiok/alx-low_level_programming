@@ -26,6 +26,7 @@ void print_to_98(int n)
 				printf(", %d", n);
 			}
 		}
+		_putchar(10);
 	}
 	else if (n > 98)
 	{
@@ -41,6 +42,7 @@ void print_to_98(int n)
 				printf(", %d", n);
 			}
 		}
+		_putchar(10);
 	}
 	else
 	{
@@ -48,5 +50,5 @@ void print_to_98(int n)
 			_putchar((n / 10) + '0');
 		_putchar((n % 10) + '0');
 	}
-	_putchar(10);
+	
 }

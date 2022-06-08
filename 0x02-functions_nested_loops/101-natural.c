@@ -1,19 +1,19 @@
 #include "main.h"
-
+#include <stdio.h>
 
 /* more headers goes there */
 /**
- * print_alphabet - Prints a to z
+ * main - Prints a to z
  *
  * Returns: Nil
  */
 
-void print_alphabet(void)
+void main(void)
 {
 	int i;
 
-	for (i = 97; i < 123; i++)
-		_putchar(i);
+	for (i = 0; i < 1024; i++)
+		if ((i % 3 == 0) && (i % 5 == 0))
+			printf("%d", i);
 
-	_putchar(10);
 }

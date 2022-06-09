@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_most_numbers - tests function
+ * more_numbers - tests function
  * Return: 1 if uppercase and 0 otherwise
  */
 
-void print_most_numbers(void)
+void more_numbers(void)
 {
 	int i, j, k = 0;
 

@@ -15,15 +15,15 @@ void print_most_numbers(void)
 		{
 			if (i > 9)
 			{
-				putchar(49);
+				_putchar(49);
 			}
 			if (j > 57)
 			{
 				j = 48;
 			}
-			putchar(j);
+			_putchar(j);
 		}
 		k++;
-		putchar(10);
+		_putchar(10);
 	}
 }

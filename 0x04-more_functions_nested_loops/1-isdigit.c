@@ -8,8 +8,8 @@
 
 int _isdigit(int c)
 {
-
-	if (c >= 48 || c <= 57)
+	char d = c + '0';
+	if (d >= 48 && d <= 57)
 	{
 		return (1);
 	}

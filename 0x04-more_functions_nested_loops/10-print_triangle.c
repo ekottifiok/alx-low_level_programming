@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * main - entry to function
+ * print_triangle - entry to function
  * Return: 1 if uppercase and 0 otherwise
  */
 
-void print_triangle(void)
+void print_triangle(int size)
 {
 	int size = 3;
 	int i = 0, j;

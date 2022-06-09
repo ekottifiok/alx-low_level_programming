@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 /**
- * _isdigit - tests function that prints if integer is positive or negative
- * @c: int inputed
+ * main - entry to function
  * Return: 1 if uppercase and 0 otherwise
  */
 
@@ -28,9 +27,8 @@ void main(void)
 			printf("Buzz");
 			continue;
 		}
-		
+
 		printf("%d ", i);
 	}
 	printf("\n");
-	
 }

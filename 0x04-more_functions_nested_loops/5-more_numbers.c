@@ -1,29 +1,22 @@
 #include "main.h"
 
 /**
- * more_numbers - tests function
- * Return: 1 if uppercase and 0 otherwise
+ * more_numbers - prints numbers between 0 to 14
+ * 10 times.
+ * Return: no return.
  */
-
 void more_numbers(void)
 {
-	int i, j, k = 0;
+	int i, ch;
 
-	while (k != 10)
+	for (i = 0; i < 10; i++)
 	{
-		for (i = 0, j = 48; i <= 14; i++, j++)
+		for (ch = 0; ch < 15; ch++)
 		{
-			if (i > 9)
-			{
-				_putchar(49);
-			}
-			if (j > 57)
-			{
-				j = 48;
-			}
-			_putchar(j);
+			if (ch >= 10)
+				_putchar((ch / 10) + 48);
+			_putchar((ch % 10) + 48);
 		}
-		k++;
-		_putchar(10);
+		_putchar('\n');
 	}
 }

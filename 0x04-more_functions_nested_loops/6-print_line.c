@@ -1,25 +1,17 @@
 #include "main.h"
 
 /**
- * print_line - tests function
- * @n: value inputted
- * Return: 1 if uppercase and 0 otherwise
+ * print_line - prints straight line n times.
+ * @n: times straight line is printed.
+ * Return: no return.
  */
-
 void print_line(int n)
 {
-	int i = 0;
+	int i;
 
-	if (n <= 0)
+	for (i = 0; i < n; i++)
 	{
-		_putchar('\n');
-		return;
+		_putchar(95);
 	}
-
-	while (i != n)
-	{
-		_putchar('_');
-		i++;
-	}
-	_putchar(10);
+	_putchar('\n');
 }

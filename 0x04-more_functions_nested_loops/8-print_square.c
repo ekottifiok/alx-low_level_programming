@@ -1,27 +1,22 @@
 #include "main.h"
 
 /**
- * print_square - tests function
- * @size: value inputted
- * Return: 1 if uppercase and 0 otherwise
+ * print_square - prints hashes squares.
+ * @size: size of the square.
+ * Return: no return.
  */
-
 void print_square(int size)
 {
 	int i, j;
-
-	if (size <= 0)
-	{
-		_putchar('\n');
-		return;
-	}
 
 	for (i = 0; i < size; i++)
 	{
 		for (j = 0; j < size; j++)
 		{
-			_putchar('#');
+			_putchar(35);
 		}
-		_putchar('\n');
+		if (i != size - 1)
+			_putchar('\n');
 	}
+	_putchar('\n');
 }

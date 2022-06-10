@@ -1,17 +1,16 @@
 #include "main.h"
 
 /**
- * print_numbers - tests function
- * Return: 1 if uppercase and 0 otherwise
+ * print_numbers - prints numbers between 0 to 9.
+ * Return: no return.
  */
-
 void print_numbers(void)
 {
-	int i;
+	int ch;
 
-	for (i = 48; i <= 57; i++)
+	for (ch = 48; ch < 58; ch++)
 	{
-		_putchar(i);
+		_putchar(ch);
 	}
-	_putchar(10);
+	_putchar('\n');
 }

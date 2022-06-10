@@ -1,19 +1,18 @@
 #include "main.h"
 
 /**
- * _isdigit - tests function that prints if integer is positive or negative
- * @c: int inputed
- * Return: 1 if uppercase and 0 otherwise
+ * _isdigit - checks if parameter is a number between 0 to 9.
+ * @c: input number.
+ * Return: 1 if is a number (0 to 9), 0 in other case.
  */
-
 int _isdigit(int c)
 {
-	char d = c;
-
-	if (d >= 48 && d <= 57)
+	if (c >= 48 && c <= 57)
 	{
 		return (1);
 	}
-
-	return (0);
+	else
+	{
+		return (0);
+	}
 }

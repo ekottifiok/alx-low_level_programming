@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * mul - tests function that prints if integer is positive or negative
- * @a: first value
- * @b: second value
- * Return: 1 if uppercase and 0 otherwise
+ * mul - multiplies two integers.
+ * @a: first number.
+ * @b: second number.
+ * Return: multiplication.
  */
-
 int mul(int a, int b)
 {
 	return (a * b);

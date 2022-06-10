@@ -1,33 +1,28 @@
 #include "main.h"
 
 /**
- * print_diagonal - tests function
- * @n: value inputted
- * Return: 1 if uppercase and 0 otherwise
+ * print_diagonal - draws a diagonal line on the terminal
+ * @n: number of times the character \ should be printed
  */
-
 void print_diagonal(int n)
 {
-
-	int i = 0, j;
-
 	if (n <= 0)
 	{
 		_putchar('\n');
-		return;
-	}
-
-	while (i != n)
+	} else
 	{
-		if (i > 0)
-			while (j < i)
+		int i, j;
+
+		for (i = 0; i < n; i++)
+		{
+			for (j = 0; j < n; j++)
 			{
-				_putchar(' ');
-				j++;
+				if (j == i)
+					_putchar('\\');
+				else if (j < i)
+					_putchar(' ');
 			}
-			j = 0;
-		_putchar('\\');
-		_putchar('\n');
-		i++;
+			_putchar('\n');
+		}
 	}
 }

@@ -5,13 +5,13 @@
  * @n: integer to be printed
  */
 void print_number(int n)
-{
+{   
 
     if (n < 0)
     {
         n = -n;
         _putchar('-');
-        return;
+        
     }
 
     if (n / 10)

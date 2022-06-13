@@ -23,9 +23,10 @@ void print_rev(char *s)
 
 	for (; 1; j--)
 	{
-		_putchar(s[j]);
 		if (j == 0)
 			break;
+		_putchar(s[j]);
+	
 	}
 	_putchar('\n');
 }

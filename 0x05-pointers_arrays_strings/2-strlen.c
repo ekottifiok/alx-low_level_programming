@@ -15,11 +15,10 @@ int _strlen(char *s)
 		if (s[i])
 		{
 			j++;
+			continue;
 		}
-		else
-		{
-			break;
-		}
+		
+		break;
 	}
 
 	return (j);

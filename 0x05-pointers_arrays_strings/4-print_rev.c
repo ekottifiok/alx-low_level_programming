@@ -21,7 +21,8 @@ void print_rev(char *s)
 		break;
 	}
 
-	for (; 1; --j)
+	
+	for (j--; 1; j--)
 	{
 		_putchar(s[j]);
 		if (j == 0)

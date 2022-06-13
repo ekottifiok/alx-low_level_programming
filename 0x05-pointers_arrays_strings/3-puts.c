@@ -8,11 +8,13 @@
 
 void _puts(char *str)
 {
-	for (int i = 0; 1; i++)
+	int i;
+
+	for (i = 0; 1; i++)
 	{
 		if (str[i])
 		{
-			putchar(str[i]);
+			_putchar(str[i]);
 			continue;
 		}
 		break;

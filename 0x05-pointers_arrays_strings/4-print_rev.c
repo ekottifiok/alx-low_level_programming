@@ -10,6 +10,12 @@ void print_rev(char *s)
 {
 	int i, j;
 
+	if (s == '\0')
+	{
+		_putchar('\n');
+		return;
+	}
+
 	for (i = 0, j = 0; 1; i++)
 	{
 		if (s[i])
@@ -21,8 +27,7 @@ void print_rev(char *s)
 		break;
 	}
 
-	
-	for (j--; 1; j--)
+		for (j--; 1; j--)
 	{
 		_putchar(s[j]);
 		if (j == 0)

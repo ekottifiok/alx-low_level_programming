@@ -9,13 +9,18 @@
 void rev_string(char *s)
 {
 	int i, j;
+	char *buffer;
 
+	/* checks for an empty string
+	 */
 	if (s[0] == '\0')
 	{
 		_putchar('\n');
 		return;
 	}
 
+	/* checks the length of the string and stores it in j
+	 */
 	for (i = 0, j = 0; 1; i++)
 	{
 		if (s[i])
@@ -27,11 +32,24 @@ void rev_string(char *s)
 		break;
 	}
 
-		for (j--; 1; j--)
+	/* copies the content of s to a buffer 
+	 */
+	char buffer[i+1];
+	for (i = 0, j--; 1; j--, i++)
 	{
-		_putchar(s[j]);
+		buffer[i] = s[j];
 		if (j == 0)
+		{
+			buffer[i+1] = '\0';
+			
+			break;
+		}
+	}
+	
+	for (i = 0; 1; i++)
+	{
+		s[i] = buffer[i];
+		if (s[i] == '\0')
 			break;
 	}
-	_putchar('\n');
 }

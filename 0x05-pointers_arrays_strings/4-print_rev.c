@@ -27,5 +27,5 @@ void print_rev(char *s)
 		if (j == 0)
 			break;
 	}
-	_putchar('\n')
+	_putchar('\n');
 }

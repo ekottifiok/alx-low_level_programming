@@ -22,5 +22,5 @@ int _strlen(char *s)
 		}
 	}
 
-	printf("%d", j);
+	return (j);
 }

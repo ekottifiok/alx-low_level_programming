@@ -8,7 +8,7 @@
 
 void rev_string(char *s)
 {
-	int i, j;
+	int i, j, k;
 
 	/**
 	 * checks for an empty string
@@ -29,7 +29,8 @@ void rev_string(char *s)
 	/**
 	 * copies the content of s to a buffer
 	 */
-	char buffer[i + 1];
+	k = i + 1;
+	char buffer[k];
 
 	for (i = 0, j--; 1; j--, i++)
 	{

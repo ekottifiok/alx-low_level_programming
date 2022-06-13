@@ -10,7 +10,7 @@ void print_rev(char *s)
 {
 	int i, j;
 
-	if (s == '\0')
+	if (s[0] == '\0')
 	{
 		_putchar('\n');
 		return;

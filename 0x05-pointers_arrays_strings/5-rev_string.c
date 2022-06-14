@@ -8,29 +8,24 @@
 
 void rev_string(char *s)
 {
-	int i, j, k;
-	char buffer1, buffer2;
+	int i, j;
+	char buffer;
 
 		/**
 	 * checks the length of the string and stores it in j
 	 */
-	while (1)
+	while (s[i] != '\0')
 	{
-		if (s[i])
-		{
-			i++;
-			continue;
-		}
-		break;
+		i++;
 	}
 	/**
 	 * copies the content of s to a buffer
 	 */
-	for (i--, j = i, k = 0; k <= i / 2; j--, k++)
+	for (j = 0, i--; j < i/2; j++)
 	{
-		buffer1 = s[j];
-		buffer2 = s[k];
-		s[k] = buffer1;
-		s[j] = buffer2;
+		buffer = s[j];
+		s[j] = s[i-j];
+		s[i-j] = buffer;
+
 	}
 }

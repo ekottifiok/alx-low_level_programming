@@ -11,11 +11,11 @@ void rev_string(char *s)
 	int i, j, k;
 	char buffer1, buffer2;
 
-	if (s[0] == '\0')
-	{
-		putchar('\n');
-		return;
-	}
+	// if (s[0] == '\0')
+	// {
+	// 	putchar('\n');
+	// 	return;
+	// }
 	/**
 	 * checks the length of the string and stores it in j
 	 */

@@ -10,7 +10,7 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	char *ptr;
+	char buffer, *ptr;
 
 	if (dest == NULL)
 	{
@@ -21,7 +21,8 @@ char *_strcpy(char *dest, char *src)
 
 	while (*src != '\0')
 	{
-		*dest = *src;
+		buffer = *src;
+		*dest = buffer;
 		dest++;
 		src++;
 	}

@@ -9,34 +9,15 @@
 
 void puts2(char *str)
 {
-	int i, j, k;
-	char buffer1, buffer2;
+	int i;
 
-	if (str[0] == '\0')
+	for (i = 0; 1; i++)
 	{
-		putchar('\n');
-		return;
-	}
-	/**
-	 * checks the length of the string and stores it in j
-	 */
-	while (1)
-	{
-		if (str[i])
+
+		if (i % 2 == 0)
 		{
-			i++;
-			continue;
+			_putchar(str[i]);
 		}
-		break;
 	}
-	/**
-	 * copies the content of s to a buffer
-	 */
-	for (i--, j = i, k = 0; k <= i / 2; j--, k++)
-	{
-		buffer1 = str[j];
-		buffer2 = str[k];
-		str[k] = buffer1;
-		str[j] = buffer2;
-	}
+	_putchar(10);
 }

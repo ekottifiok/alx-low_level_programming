@@ -21,14 +21,14 @@ void puts_half(char *str)
 	{
 		for (j = ((i - 1) / 2); j < i; j++)
 		{
-			_putchar(str[j]);
+			putchar(str[j]);
 		}
 		return;
 	}
 
 	for (j = i / 2; j < i; j++)
 	{
-		_putchar(str[j]);
+		putchar(str[j]);
 	}
-	_putchar(10);
+	putchar(10);
 }

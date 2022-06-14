@@ -1,16 +1,15 @@
 #include <stdio.h>
 
 /**
- * rev_string - prints a string, in reverse, followed by a new line..
- * @s: input integer.
+ * puts_half - prints a string, in reverse, followed by a new line..
+ * @str: input integer.
  * Return: no return.
  */
 
 void puts_half(char *str)
 {
-    int i;
-    char str[] = "0123456789";
-    /**
+	int i = 0, j;
+	/**
 	 * checks the length of the string and stores it in j
 	 */
 	while (str[i] != '\0')
@@ -18,6 +17,17 @@ void puts_half(char *str)
 		i++;
 	}
 
-    if 
+	if (i % 2 == 1)
+	{
+		for (j = ((i - 1) / 2); j < i; j++)
+		{
+			putchar(str[j]);
+		}
+		return;
+	}
 
+	for (j = i / 2; j < i; j++)
+	{
+		putchar(str[j]);
+	}
 }

@@ -8,10 +8,17 @@
 
 void rev_string(char *s)
 {
-	int i, j;
-	char buffer;
 
-		/**
+	int i = 0, j;
+
+	/**
+	 * checks for an empty string
+	 */
+	/* char s[11] = "Holberton!"; */
+	char buffer; 
+
+
+	/**
 	 * checks the length of the string and stores it in j
 	 */
 	while (s[i] != '\0')
@@ -28,4 +35,6 @@ void rev_string(char *s)
 		s[i-j] = buffer;
 
 	}
+	
+	
 }

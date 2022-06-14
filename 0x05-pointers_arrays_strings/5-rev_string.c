@@ -27,7 +27,7 @@ void rev_string(char *s)
 	/**
 	 * copies the content of s to a buffer
 	 */
-	for (j = 0, i--; j < i / 2; j++)
+	for (j = 0, i--; j <= i / 2; j++)
 	{
 		buffer = s[j];
 		s[j] = s[i - j];

@@ -11,7 +11,7 @@ void reverse_array(int *a, int n)
 
 	int buffer, i;
 
-	for (i = 0, n--; i <= n / 2; i++)
+	for (i = 0, n--; i < n / 2; i++)
 	{
 
 		buffer = a[n - i];

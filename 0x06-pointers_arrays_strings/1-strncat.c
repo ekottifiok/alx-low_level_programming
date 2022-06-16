@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * _strcat - prints a string, in reverse, followed by a new line..
+ * _strncat - prints a string, in reverse, followed by a new line..
  * @dest: input integer.
  * @src: input integer
+ * @n: the number of byte(s)
  * Return: no return.
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i = 0, j = 0, k;
 
@@ -22,7 +23,7 @@ char *_strcat(char *dest, char *src)
 	}
 
 	k = i + j;
-	
+
 	char buffer[k];
 
 	for (k = 0; k < i; k++)
@@ -30,8 +31,10 @@ char *_strcat(char *dest, char *src)
 		buffer[k] = src[k];
 	}
 
-	for (; k < (i + j); k++)
+	for (; k < (i + n); k++)
 	{
+		if (!dest[k - i])
+			break;
 		buffer[k] = dest[k - i];
 	}
 

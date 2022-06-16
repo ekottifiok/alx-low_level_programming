@@ -17,6 +17,10 @@ void puts_half(char *str)
 		i++;
 	}
 
+	/**
+	 * @brief if the total number is odd
+	 * 
+	 */
 	if (i % 2 == 1)
 	{
 		for (j = ((i + 1) / 2); j < i; j++)
@@ -27,6 +31,10 @@ void puts_half(char *str)
 		return;
 	}
 
+	/**
+	 * @brief if the total number is even
+	 * 
+	 */
 	for (j = i / 2; j < i; j++)
 	{
 		putchar(str[j]);

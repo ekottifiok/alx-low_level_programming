@@ -14,7 +14,7 @@ void reverse_array(int *a, int n)
 
 	for (i = 0, n--; i < n / 2; i++, n--)
 	{
-		// i is falling and j is rising
+
 		buffer = a[n];
 		a[n] = a[i];
 		a[i] = buffer;

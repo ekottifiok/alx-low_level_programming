@@ -19,7 +19,7 @@ int _strcmp(char *s1, char *s2)
 		s2++;
 		
 	}
-	printf("%c", *s1);
+	
 	return (*s1 - *s2);
 	
 }

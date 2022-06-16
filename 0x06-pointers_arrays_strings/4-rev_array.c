@@ -6,16 +6,17 @@
  * @n: input integer
  * Return: no return.
  */
+
 void reverse_array(int *a, int n)
 {
+	int i, j, tmp;
 
-	int buffer, i;
+	j = n - 1;
 
-	for (i = 0, n--; i < n / 2; i++)
+	for (i = 0; i < n / 2; i++)
 	{
-
-		buffer = a[n - i];
-		a[n - i] = a[i];
-		a[i] = buffer;
+		tmp = a[i];
+		a[i] = a[j];
+		a[j--] = tmp;
 	}
 }

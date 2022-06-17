@@ -1,5 +1,5 @@
 /**
- * infinte_add - adds numbers in an array
+ * infinite_add - adds numbers in an array
  * @n1: first number
  * @n2: second l number
  * @r: result stored here
@@ -7,7 +7,7 @@
  * Return: The values found
  */
 
-char *infinte_add(char *n1, char *n2, char *r, int size_r)
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i;
 

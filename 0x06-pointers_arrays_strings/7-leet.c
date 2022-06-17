@@ -20,6 +20,7 @@ char *leet(char *n)
 			if (n[j] == lookout[i] || n[j] == (lookout[i] + 32))
 			{
 				n[j] = replacement[i];
+				break;
 			}
 		}
 	}

@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * leet - replaces letters
+ *
+ * @n : hello
+ * Return: the updated pointer
+ */
+
 char *leet(char *n)
 {
 	int i, j;
@@ -10,12 +17,11 @@ char *leet(char *n)
 	{
 		for (i = 0; lookout[i] != '\0'; i++)
 		{
-			if (n[j] == lookout[i] || n[j] == (lookout[i]+32))
+			if (n[j] == lookout[i] || n[j] == (lookout[i] + 32))
 			{
 				n[j] = replacement[i];
 			}
 		}
-		
 	}
 	return (n);
 }

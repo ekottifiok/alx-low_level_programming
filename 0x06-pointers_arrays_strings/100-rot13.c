@@ -9,17 +9,19 @@
 
 char *rot13(char *n)
 {
-	int i, j;
-
-	for (i = 0; n[i] != '\0'; i++)
-	{
-		for (j = 0;; j++)
-		{
-			if ((n[i] >= 'a' && n[i] <= 'z') ||
-				(n[i] >= 'A' && n[i] <= 'Z'))
-			{
-				n[i] += 13;
-			}
-		}
-	}
+	char lookout[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char replacement[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+    int i, j;
+    for (i = 0; n[i] != '\0'; i++)
+    {
+        for (j = 0; lookout[j] != '\0'; j++)
+        {
+            if (n[i] == lookout[j])
+            {
+                n[i] = replacement[j];
+				break;
+            }
+        }
+    }
+	return (n);
 }

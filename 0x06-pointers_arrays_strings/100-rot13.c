@@ -22,6 +22,10 @@ char *rot13(char *n)
 				n[i] = replacement[j];
 				break;
 			}
+			else
+			{
+				continue;
+			}
 		}
 	}
 	return (n);

@@ -1,29 +1,30 @@
-#include "main.h"
-
 /**
- * rot13 - replaces letters
+ * rot13 - encodes a string using rot13.
+ * @str: The string to be encoded
  *
- * @n : hello
- * Return: the updated pointer
+ * Return: The encoded string
  */
-
-char *rot13(char *n)
+char *rot13(char *str)
 {
-	char lookout[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char replacement[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int i, j;
 
-	for (i = 0; n[i] != '\0'; i++)
+	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		for (j = 0; lookout[j] != '\0'; j++)
+		j = 0;
+		while (letters[j] != '\0')
 		{
-			if (n[i] == lookout[j])
+			if (str[i] == letters[j])
 			{
-				n[i] = replacement[j];
+				str[i] = rot13[j];
 				break;
 			}
+			j++;
 		}
+		i++;
 	}
-	
-	return (n);
+	return (str);
 }

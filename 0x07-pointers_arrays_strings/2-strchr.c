@@ -10,18 +10,20 @@
 
 char *_strchr(char *s, char c)
 {
+	char *buffer;
 
-	while (*s != '\0')
+	buffer = s;
+	while (*buffer != '\0')
 	{
-		if (c == *s)
+		if (c == *buffer)
 		{
 			break;
 		}
-		s++;
+		buffer++;
 	}
 
-	if (*s == '\0')
+	if (*buffer == '\0')
 		return (NULL);
 
-	return (s);
+	return (buffer);
 }

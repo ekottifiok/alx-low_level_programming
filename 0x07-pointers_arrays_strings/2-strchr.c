@@ -22,8 +22,9 @@ char *_strchr(char *s, char c)
 		buffer++;
 	}
 
-	if (*buffer == '\0')
+	if (*buffer == 0)
+	{
 		return (NULL);
-
+	}
 	return (buffer);
 }

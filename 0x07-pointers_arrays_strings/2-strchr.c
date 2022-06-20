@@ -11,22 +11,22 @@
 
 char *_strchr(char *s, char c)
 {
-  char *buffer;
+  int buffer;
 
-  buffer = s;
-  while (*buffer != '\0')
+  while (*s != '\0')
   {
-    if (c == *buffer)
+		buffer = *s;
+    if (c == buffer)
     {
       break;
     }
-    buffer++;
+    s++;
   }
 
-  if (*buffer == '\0')
+  if (buffer == '\0')
   {  
     return (NULL);
   }
 
-  return (buffer);
+  return (s);
 }

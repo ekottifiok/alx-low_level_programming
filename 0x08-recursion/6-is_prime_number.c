@@ -30,5 +30,5 @@ int _is_prime_number_wrapper(int n, int max)
 		return (1);
 	if (n % max == 0)
 		return (0);
-	_sqrt_recursion_wrapper(n, max - 1);
+	_is_prime_number_wrapper(n, max - 1);
 }

@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _puts_recursion -
+ * _puts_recursion - recursion function
  *
- * @s :
+ * @s: input character
  */
 
 void _puts_recursion(char *s)
@@ -13,5 +13,4 @@ void _puts_recursion(char *s)
 		_putchar(*s);
 		_puts_recursion(s + 1);
 	}
-	return;
 }

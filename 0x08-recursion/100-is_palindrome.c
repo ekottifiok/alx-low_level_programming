@@ -1,55 +1,47 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
+
+int check_pal(char *s, int i, int len);
+int _strlen_recursion(char *s);
 
 /**
- * is_palindrome - entry palindrome
+ * is_palindrome - checks if a string is a palindrome
+ * @s: string to reverse
  *
- * @s: input character pointer
- * @counter: counter for the iteration
- * @t: return of the result
- * Return: char*
+ * Return: 1 if it is, 0 it's not
  */
-
-char *is_palindrome_wrapper(char *s, int counter, char *t);
-
 int is_palindrome(char *s)
 {
-	int j;
-	char *palindrome;
-
-	for (j = 0; s[j] != '\0'; j++)
-	{
-		continue;
-	}
-	j--;
-	palindrome = is_palindrome_wrapper(s + j, j, buffer);
-
-	for (j = 0; palindrome[j] != '\0'; j++)
-	{
-		if (palindrome[j] == s[j])
-			continue;
-		break;
-	}
-	if (palindrome[j] == '\0')
+	if (*s == 0)
 		return (1);
-	return (0);
+	return (check_pal(s, 0, _strlen_recursion(s)));
 }
 
 /**
- * is_palindrome_wrapper - reverses the characters
+ * _strlen_recursion - returns the length of a string
+ * @s: string to calculate the length of
  *
- * @s: original text
- * @counter: keeps count of the iteration
- * @t: buffer where the reversed string is stored
- * Return: returns a pointer to the reverse
+ * Return: length of the string
  */
-
-char *is_palindrome_wrapper(char *s, int counter, char *t)
+int _strlen_recursion(char *s)
 {
-	if (counter >= 0)
-	{
-		*t = *s;
-		is_palindrome_wrapper(s - 1, counter - 1, t + 1);
-	}
-	return (t);
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
+}
+
+/**
+ * check_pal - checks the characters recursively for palindrome
+ * @s: string to check
+ * @i: iterator
+ * @len: length of the string
+ *
+ * Return: 1 if palindrome, 0 if not
+ */
+int check_pal(char *s, int i, int len)
+{
+	if (*(s + i) != *(s + len - 1))
+		return (0);
+	if (i >= len)
+		return (1);
+	return (check_pal(s, i + 1, len - 1));
 }

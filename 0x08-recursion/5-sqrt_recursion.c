@@ -10,6 +10,14 @@ int _sqrt_recursion_wrapper(int n, int max);
 
 int _sqrt_recursion(int n)
 {
+	if (n == 1)
+		return (1);
+	if (n < 0)
+		return (-1);
+	if (n < 10000)
+		return (_sqrt_recursion_wrapper(n, 100));
+	if (n < 100000000 && n > 10000)
+		return (_sqrt_recursion_wrapper(n, 10000));
 	return (_sqrt_recursion_wrapper(n, n / 2));
 }
 
@@ -23,9 +31,10 @@ int _sqrt_recursion(int n)
 
 int _sqrt_recursion_wrapper(int n, int max)
 {
-	if (max == 0)
-		return (-1);
 	if (max * max == n)
 		return (max);
+	if (max == 0)
+		return (-1);
+
 	return (_sqrt_recursion_wrapper(n, max - 1));
 }

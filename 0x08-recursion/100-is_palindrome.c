@@ -14,7 +14,7 @@ char *is_palindrome_wrapper(char *s, int counter, char *t);
 
 int is_palindrome(char *s)
 {
-	int i, j;
+	int j;
 	char *palindrome, *buffer;
 
 	for (j = 0; s[j] != '\0'; j++)

@@ -23,6 +23,12 @@ int main(int argc, char const *argv[])
 
 	value = atoi(argv[1]);
 
+	if (value < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+
 	for (change = 0, i = 0; value != 0; i++)
 	{
 		buffer = value / check[i];

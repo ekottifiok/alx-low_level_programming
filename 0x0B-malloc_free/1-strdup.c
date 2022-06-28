@@ -12,6 +12,9 @@ char *_strdup(char *str)
 	char *pointer;
 	unsigned int i, j;
 
+	if (str == NULL)
+		return (NULL);
+
 	for (i = 0; str[i] != '\0'; i++)
 		continue;
 

@@ -17,6 +17,8 @@ char *str_concat(char *s1, char *s2)
 		continue;
 
 	pointer = (char *)malloc(sizeof(char) * i);
+	if (!pointer)
+		return (NULL);
 
 	for (j = 0; s1[j] != '\0'; j++)
 		pointer[j] = s1[j];

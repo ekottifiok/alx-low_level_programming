@@ -14,7 +14,7 @@ void rev_string(char *s)
 	/**
 	 * checks for an empty string
 	 */
-	/* char s[11] = "Holberton!"; */
+	/* char s[11] = "main!"; */
 	char buffer;
 
 	/**

@@ -79,6 +79,31 @@ int is_int(const char *string)
 }
 
 /**
+ * error - takes care of errors
+ *
+ */
+void error(void)
+{
+	printf("Error\n");
+	exit(98);
+}
+
+/**
+ * length - measures the length of string
+ *
+ * @string: original string
+ * Return: int
+ */
+int length(const char *string)
+{
+	int length;
+
+	for (length = 0; string[length]; length++)
+		;
+	return (length);
+}
+
+/**
  * preliminary_checks - makes some preliminary checks on the string
  *
  * @total: total number of items in the string
@@ -88,15 +113,9 @@ int is_int(const char *string)
 void preliminary_checks(int total, char const *str1, char const *str2)
 {
 	if (total != 3)
-	{
-		printf("Error\n");
-		exit(98);
-	}
+		error();
 	if (!(is_int(str1) == 0 && is_int(str2) == 0))
-	{
-		printf("Error\n");
-		exit(98);
-	}
+		error();
 }
 
 /**
@@ -115,10 +134,8 @@ int main(int argc, char const *argv[])
 	char const *ptr1 = argv[1], *ptr2 = argv[2], *buffer;
 
 	preliminary_checks(argc, ptr1, ptr2);
-	for (length_s1 = 0; ptr1[length_s1]; length_s1++)
-		;
-	for (length_s2 = 0; ptr2[length_s2]; length_s2++)
-		;
+	length_s1 = length(ptr1);
+	length_s2 = length(ptr2);
 	if (length_s1 < length_s2)
 	{
 		buffer = ptr1;
@@ -130,8 +147,8 @@ int main(int argc, char const *argv[])
 	}
 	total_length = length_s1 * length_s2;
 	result = malloc(sizeof(char) * total_length);
-	if (!result)
-		
+	if (!(result))
+		error();
 	result[total_length] = '\0';
 	for (i = 0; i < total_length; i++)
 		result[i] = INT_TO_STR(0);

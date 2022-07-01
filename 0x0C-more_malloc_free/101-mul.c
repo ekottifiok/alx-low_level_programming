@@ -119,6 +119,19 @@ void preliminary_checks(int total, char const *str1, char const *str2)
 }
 
 /**
+ * print_answer - prints the answer
+ *
+ * @string: original string
+ */
+
+void print_answer(char const *string)
+{
+	for (; *string; string++)
+		_putchar(*string);
+	_putchar('\n');
+}
+
+/**
  * main - entrypoint to the function
  *
  * @argc: total number of values int
@@ -147,8 +160,8 @@ int main(int argc, char const *argv[])
 	}
 	total_length = length_s1 * length_s2;
 	result = malloc(sizeof(char) * total_length);
-	if (!(result))
-		error();
+	if (!result)
+		return (1);
 	result[total_length] = '\0';
 	for (i = 0; i < total_length; i++)
 		result[i] = INT_TO_STR(0);
@@ -165,6 +178,7 @@ int main(int argc, char const *argv[])
 		position = total_length - l - 2;
 	}
 	result = rid_zeros(result, total_length);
-	printf("%s\n", result);
+	print_answer(result);
+	free(result);
 	return (0);
 }

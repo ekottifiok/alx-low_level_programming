@@ -13,6 +13,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *buffer;
 
 	buffer = malloc(sizeof(dog_t));
+	if (!buffer)
+		return (NULL);
 
 	buffer->name = name;
 	buffer->owner = owner;

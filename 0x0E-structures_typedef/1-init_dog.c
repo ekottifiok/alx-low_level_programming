@@ -2,17 +2,17 @@
 #include "dog.h"
 
 /**
- * @brief 
- * 
- * @param d 
- * @param name 
- * @param age 
- * @param owner 
+ * init_dog - creates a new dog entry
+ *
+ * @d: a pointer to the dog information
+ * @name: the dog name
+ * @age: the age of the dog
+ * @owner: the owner of the dog
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-    d->age = age;
-    d->name = name;
-    d->owner = owner;
+	d->age = age;
+	d->name = name;
+	d->owner = owner;
 }

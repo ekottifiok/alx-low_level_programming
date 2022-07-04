@@ -1,6 +1,7 @@
 #ifndef DOG_H
 #define DOG_H
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct dog- carries the data needed to create a dog

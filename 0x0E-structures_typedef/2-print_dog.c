@@ -1,7 +1,6 @@
 #include "dog.h"
-#include <stdio.h>
 #ifndef NULL_CHECKER
-#define NULL_CHECKER(val) ((val == NULL) ? ("nil") : (val))
+#define NULL_CHECKER(val) ((!val) ? ("(nil)") : (val))
 #endif
 
 /**

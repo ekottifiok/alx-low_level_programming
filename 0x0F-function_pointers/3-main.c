@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
 	}
 	arg2 = atoi(argv[3]);
 	symbol = *argv[2];
-	if ((symbol == '/' || '%') && arg2 == 0)
+	if ((symbol == '/' || symbol == '%') && arg2 == 0)
 	{
 		printf("Error\n");
 		exit(100);

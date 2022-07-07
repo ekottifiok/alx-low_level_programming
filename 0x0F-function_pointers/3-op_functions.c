@@ -1,11 +1,11 @@
 #include "3-calc.h"
 
 /**
- * op_add - add two integers
+ * op_add - calculates the sum of two integers
+ * @a: first integer
+ * @b: second integer
  *
- * @a: integer 2
- * @b: integer 1
- * Return: int
+ * Return: sum of a and b
  */
 int op_add(int a, int b)
 {
@@ -13,11 +13,11 @@ int op_add(int a, int b)
 }
 
 /**
- * op_sub - subtracts two integers
+ * op_sub - calculates the difference of two integers
+ * @a: first integer
+ * @b: second integer
  *
- * @a: integer 2
- * @b: integer 1
- * Return: int
+ * Return: difference of a and b
  */
 int op_sub(int a, int b)
 {
@@ -25,11 +25,11 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - multipy two integers
+ * op_mul - calculates the product of two integers
+ * @a: first integer
+ * @b: second integer
  *
- * @a: integer 2
- * @b: integer 1
- * Return: int
+ * Return: product of a and b
  */
 int op_mul(int a, int b)
 {
@@ -37,11 +37,11 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - divides two integers
+ * op_div - calculates the division of two integers
+ * @a: first integer
+ * @b: second integer
  *
- * @a: integer 2
- * @b: integer 1
- * Return: int
+ * Return: result of the division of a and b
  */
 int op_div(int a, int b)
 {
@@ -49,11 +49,11 @@ int op_div(int a, int b)
 }
 
 /**
- * op_mod - modulus two integers
+ * op_mod - calculates the remainder of the division of two integers
+ * @a: first integer
+ * @b: second integer
  *
- * @a: integer 2
- * @b: integer 1
- * Return: int
+ * Return: remainder of a divided b
  */
 int op_mod(int a, int b)
 {

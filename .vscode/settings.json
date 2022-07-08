@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "main.h": "c",
-        "dog.h": "c"
+        "dog.h": "c",
+        "3-calc.h": "c",
+        "stdio.h": "c",
+        "typeinfo": "c",
+        "function_pointers.h": "c",
+        "variadic_functions.h": "c"
     }
 }

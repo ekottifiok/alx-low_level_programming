@@ -3,5 +3,5 @@ scratch
 trial
 trial.c
 .vscode
-.vscode/tasks.json
-.vscode/settings.json
+0x12-singly_linked_lists/*main.c
+.vscode/*

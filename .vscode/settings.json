@@ -6,6 +6,7 @@
         "stdio.h": "c",
         "typeinfo": "c",
         "function_pointers.h": "c",
-        "variadic_functions.h": "c"
+        "variadic_functions.h": "c",
+        "lists.h": "c"
     }
 }

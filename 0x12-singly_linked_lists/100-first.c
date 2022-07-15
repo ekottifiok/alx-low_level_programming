@@ -2,7 +2,7 @@
 
 void first(void) __attribute__((constructor));
 /**
- * before_main - prints something before the main function is run
+ * first - prints something before the main function is run
  *
  */
 void first(void)

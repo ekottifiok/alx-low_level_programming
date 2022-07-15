@@ -1,5 +1,10 @@
 #include "lists.h"
 
+/**
+ * free_list - frees the content of the list
+ *
+ * @head: the pointer of the haed
+ */
 void free_list(list_t *head)
 {
 	list_t *buffer;

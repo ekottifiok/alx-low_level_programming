@@ -12,9 +12,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	unsigned int iter;
 	listint_t *buffer;
 
+	buffer = head;
 	for (iter = 0; iter < index && head; iter++)
 	{
 		buffer = head->next;
 	}
-	return (buffer);
+	return (buffer ? buffer : NULL);
 }

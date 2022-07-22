@@ -5,4 +5,5 @@ trial.c
 .vscode
 0x12-singly_linked_lists/*main.c
 0x13-more_singly_linked_lists/*main.c
+0x14-bit_manipulation/*main.c
 .vscode/*

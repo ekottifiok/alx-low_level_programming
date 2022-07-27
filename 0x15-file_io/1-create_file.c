@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * create_file - creates a file and stores a text inside
+ *
+ * @filename: file name to be created
+ * @text_content: text to be stored inside
+ * Return: int
+ */
 int create_file(const char *filename, char *text_content)
 {
 	int descriptor_int, write_int, text_number;

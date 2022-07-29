@@ -1,2 +1,2 @@
 #!/bin/bash
-betty-doc *[^main].c; betty *[^main].c; betty-style *[^main].c
+betty-doc *[^main].c main.h; betty *[^main].c main.h; betty-style *[^main].c main.h

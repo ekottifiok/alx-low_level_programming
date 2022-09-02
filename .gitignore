@@ -8,3 +8,7 @@ trial.c
 0x14-bit_manipulation/*main.c
 0x15-file_io/*main.c
 .vscode/*
+cmake-build-debug/*
+.clang-format
+.idea/*
+build/*

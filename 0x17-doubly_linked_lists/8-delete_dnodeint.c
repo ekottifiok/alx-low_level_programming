@@ -1,64 +1,53 @@
 #include "lists.h"
 
 /**
- * len_dlistint_8 - finds the length of list
+ * delete_dnodeint_at_index - deletes the node at index of a
+ * dlistint_t linked list
  *
- * @list: the list to be found
- * Return: an unsigned int containing the list
+ * @head: head of the list
+ * @index: index of the new node
+ * Return: 1 if it succeeded, -1 if it failed
  */
-unsigned int len_dlistint_8(dlistint_t *list)
-{
-	unsigned int iter;
 
-	if (!list)
-		return (0);
-	while (list->prev)
-		list = list->prev;
-	for (iter = 0; list; iter++, list = list->next)
-		;
-	return (iter);
-}
-
-/**
- * delete_dnodeint_at_index - deletes a node at a particular index
- *
- * @head: the list to delete a node
- * @index: the position to be deleted
- * Return: -1 for failure and 1 for success
- */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int len_list, position = index;
-	dlistint_t *buffer, *next_buffer;
+	dlistint_t *h1;
+	dlistint_t *h2;
+	unsigned int i;
 
-	len_list = len_dlistint_8(*head);
-	if (index > len_list || !(*head) || len_list == 0)
-		return (-1);
+	h1 = *head;
 
-	if (index == 0)
+	if (h1 != NULL)
+		while (h1->prev != NULL)
+			h1 = h1->prev;
+
+	i = 0;
+
+	while (h1 != NULL)
 	{
-		if (!(*head)->next && !(*head)->prev)
+		if (i == index)
 		{
-			free(*head);
-			*head = NULL;
+			if (i == 0)
+			{
+				*head = h1->next;
+				if (*head != NULL)
+					(*head)->prev = NULL;
+			}
+			else
+			{
+				h2->next = h1->next;
+
+				if (h1->next != NULL)
+					h1->next->prev = h2;
+			}
+
+			free(h1);
+			return (1);
 		}
-		else
-		{
-			*head = (*head)->next;
-			free((*head)->prev);
-			(*head)->prev = NULL;
-		}
-		return (1);
+		h2 = h1;
+		h1 = h1->next;
+		i++;
 	}
-	buffer = *head;
-	for (; buffer && position > 1; position--, buffer = buffer->next)
-		;
-	next_buffer = (buffer->next)->next;
-	free(buffer->next);
-	if (index == (len_list - 1))
-		buffer->next = NULL;
-	else
-		buffer->next = next_buffer;
-	next_buffer->prev = buffer;
-	return (1);
+
+	return (-1);
 }

@@ -13,3 +13,5 @@ cmake-build-debug/*
 .idea/*
 build/*
 */trial
+
+0x18-dynamic_libraries/dynamic/

@@ -4,14 +4,10 @@ project(alx_low_level_programming C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(alx_low_level_programming
-        0x17-doubly_linked_lists/3-add_dnodeint_end.c
-        0x17-doubly_linked_lists/0-print_dlistint.c
-        0x17-doubly_linked_lists/4-free_dlistint.c
-        0x17-doubly_linked_lists/5-get_dnodeint.c
-        0x17-doubly_linked_lists/2-add_dnodeint.c
-        0x17-doubly_linked_lists/1-dlistint_len.c
-        0x17-doubly_linked_lists/6-sum_dlistint.c
-        0x17-doubly_linked_lists/7-insert_dnodeint.c
-        0x17-doubly_linked_lists/8-delete_dnodeint.c
-        0x17-doubly_linked_lists/8-main.c
+        0x1A-hash_tables/0-hash_table_create.c
+        0x1A-hash_tables/1-djb2.c
+        0x1A-hash_tables/2-key_index.c
+        0x1A-hash_tables/3-hash_table_set.c
+        0x1A-hash_tables/4-hash_table_get.c
+        0x1A-hash_tables/4-main.c
         )

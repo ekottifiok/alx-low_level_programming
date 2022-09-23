@@ -33,15 +33,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	buffer->next = NULL;
 	index = key_index((const unsigned char *) buffer->key, ht->size);
 	if (ht->array[index] == NULL)
-	{	
+	{
 		ht->array[index] = buffer;
 	}
 	else
 	{
 		h = ht->array[index];
 		while (h->next != NULL)
-			h = h->next;		
-
+			h = h->next;
 		h->next = buffer;
 	}
 	return (1);

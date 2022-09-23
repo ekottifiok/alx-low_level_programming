@@ -9,7 +9,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *buffer, *h;
+	hash_node_t *buffer;
 	unsigned long int index;
 
 	if (!key || *key == '\0' || !value || ht == NULL)

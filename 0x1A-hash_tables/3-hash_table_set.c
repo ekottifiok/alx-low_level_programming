@@ -38,10 +38,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		h = ht->array[index];
-		while (h->next != NULL)
-			h = h->next;
-		h->next = buffer;
+		buffer->next = ht->array[index];
+		ht->array[index] = buffer;
 	}
 	return (1);
 }

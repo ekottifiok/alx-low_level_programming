@@ -20,6 +20,8 @@ shash_table_t *shash_table_create(unsigned long int size)
 		return (NULL);
 	for (iter = 0; iter < size; iter++)
 		main_list->array[iter] = NULL;
+	main_list->shead = NULL;
+	main_list->stail = NULL;
 	return (main_list);
 }
 
@@ -54,6 +56,8 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	buffer->next = NULL;
+	buffer->snext = NULL;
+	buffer->sprev = NULL;
 	index = key_index((const unsigned char *) buffer->key, ht->size);
 	if (ht->array[index] == NULL)
 	{
@@ -162,6 +166,9 @@ void shash_table_delete(shash_table_t *ht)
 	unsigned long int iter;
 	shash_node_t *buffer1, *buffer2;
 
+	if (!ht)
+		return;
+
 	for (iter = 0; iter < ht->size; iter++)
 	{
 		if (ht->array[iter] == NULL)
@@ -172,6 +179,8 @@ void shash_table_delete(shash_table_t *ht)
 			buffer2 = buffer1->next;
 			free(buffer1->key);
 			free(buffer1->value);
+			buffer1->sprev = NULL;
+			buffer1->snext = NULL;
 			free(buffer1);
 			buffer1 = buffer2;
 		}

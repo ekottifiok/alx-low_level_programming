@@ -20,7 +20,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (buffer < 10)
 			r[position] = buffer + '0';
 			continue;
-
 		if (i == 0)
 		{
 			r[i] = 1 + '0';
@@ -41,9 +40,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			r[position] = (buffer % 10) + '0';
 			continue;
 		}
-
 		r[position - 1] = (prev_value + 1) + '0';
-		r[position] = (buffer % 10) + '0'; 
+		r[position] = (buffer % 10) + '0';
 		continue;
 	}
 	r[position] = '\0';

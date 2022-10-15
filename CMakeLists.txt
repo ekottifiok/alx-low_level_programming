@@ -13,6 +13,6 @@ add_executable(alx_low_level_programming
         # 0x1A-hash_tables/6-hash_table_delete.c
         # 0x1A-hash_tables/7-hash_table_print_rev.c
         # 0x1A-hash_tables/6-main.c
-        0x1A-hash_tables/100-sorted_hash_table.c
-        0x1A-hash_tables/100-main.c
+        0x07-pointers_arrays_strings/3-strspn_kamal.c
+        0x07-pointers_arrays_strings/3-main.c
         )

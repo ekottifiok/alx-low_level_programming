@@ -1,184 +1,137 @@
 #include "main.h"
-
-#define STR_TO_INT(val) (val - 48)
-#define INT_TO_STR(val) (val + 48)
+#include <ctype.h>
 
 /**
- * add_to_result - adds to string from buffer based on the position
+ * main - a program that multiplies two positive numbers.
+ * @argc: The argument count
+ * @argv: The arguments
  *
- * @string: pointer to the original string
- * @position: for the next iteration
- * @buffer: the result to be added
- * Return: char*
+ * Return: 0 on success, 38 otherwise
  */
-char *add_to_result(char *string, int position, int buffer)
+int main(int argc, char *argv[])
 {
-	int remainder, m;
+	int mul[2000] = {0};
+	int i, j;
 
-	string[position] = INT_TO_STR(buffer % 10);
-	if (buffer > 9)
+	if (argc != 3)
 	{
-		remainder = buffer / 10;
-		for (m = position - 1; string[position] < 9; m--)
+		printf("Error\n");
+		exit(98);
+	}
+
+	for (i = 0; i < 1024; i++)
+		mul[i] = 0;
+	for (i = 1; i < argc; i++)
+	{
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			string[m] = INT_TO_STR(remainder + STR_TO_INT(string[m]));
-			remainder = 0;
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				exit(98);
+			}
 		}
-		string[m] = INT_TO_STR(remainder + STR_TO_INT(string[m]));
 	}
-	return (string);
-}
-
-/**
- * rid_zeros - removes all the trailing zeros from result
- *
- * @string: pointer to the original string
- * @length: length of string
- * Return: char*
- */
-char *rid_zeros(char *string, int length)
-{
-	int flag, iteration;
-	char *replica;
-
-	replica = malloc(sizeof(char) * length);
-
-	for (flag = 0, iteration = 0; *string; string++)
-	{
-		if (*string != '0' || flag != 0)
-		{
-			flag = 1;
-			*replica = *string;
-			replica++;
-			continue;
-		}
-		iteration++;
-	}
-	return (replica - length + iteration);
-}
-
-/**
- * is_int - check for the integer in the string
- *
- * @string: original string
- * Return: int
- */
-
-int is_int(const char *string)
-{
-	int character;
-
-	for (; *string; string++)
-	{
-		character = STR_TO_INT(*string);
-		if (character >= 0 && character <= 9)
-			continue;
-		return (1);
-	}
+	_multiply(mul, argv);
+	print_ans(mul);
 	return (0);
 }
 
 /**
- * error - takes care of errors
+ * _strlen - This function returns the length of a string.
+ * @s: The string to return the length
  *
+ * Return: Length of s
  */
-void error(void)
+int _strlen(char *s)
 {
-	printf("Error\n");
-	exit(98);
+	long int len = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	return (len);
 }
 
 /**
- * length - measures the length of string
+ * _multiply - multiply two numbers
+ * @mul: The array to store the result
+ * @str: The string
  *
- * @string: original string
- * Return: int
+ * Returns: void
  */
-int length(const char *string)
+void _multiply(int *mul, char *str[])
 {
-	int length;
+	int i, j, len1, len2, tmp;
+	char *s1 = str[1], *s2 = str[2];
 
-	for (length = 0; string[length]; length++)
-		;
-	return (length);
-}
-
-/**
- * preliminary_checks - makes some preliminary checks on the string
- *
- * @total: total number of items in the string
- * @str1: string representing integer 1
- * @str2: string representing integer 2
- */
-void preliminary_checks(int total, char const *str1, char const *str2)
-{
-	if (total != 3)
-		error();
-	if (!(is_int(str1) == 0 && is_int(str2) == 0))
-		error();
-}
-
-/**
- * print_answer - prints the answer
- *
- * @string: original string
- */
-
-void print_answer(char const *string)
-{
-	for (; *string; string++)
-		_putchar(*string);
-	_putchar('\n');
-}
-
-/**
- * main - entrypoint to the function
- *
- * @argc: total number of values int
- * @argv: pointer to the original values
- * Return: int
- */
-
-int main(int argc, char const *argv[])
-{
-	int character1, character2, int_buffer, i, j, k, l;
-	int length_s1, length_s2, length_buffer, position, total_length;
-	char *result;
-	char const *ptr1 = argv[1], *ptr2 = argv[2], *buffer;
-
-	preliminary_checks(argc, ptr1, ptr2);
-	length_s1 = length(ptr1);
-	length_s2 = length(ptr2);
-	if (length_s1 < length_s2)
+	rev_string(s1);
+	rev_string(s2);
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+	for (i = 0; i < len1; i++)
 	{
-		buffer = ptr1;
-		ptr1 = ptr2;
-		ptr2 = buffer;
-		length_buffer = length_s1;
-		length_s1 = length_s2;
-		length_s2 = length_buffer;
-	}
-	total_length = length_s1 * length_s2;
-	result = malloc(sizeof(char) * total_length);
-	if (!result)
-		return (1);
-	result[total_length] = '\0';
-	for (i = 0; i < total_length; i++)
-		result[i] = INT_TO_STR(0);
-	for (i = length_s2 - 1, int_buffer = 0, position = total_length - 1, l = 0;
-		 i >= 0; i--, l++)
-	{
-		character2 = STR_TO_INT(ptr2[i]);
-		for (j = length_s1 - 1, k = 0; j >= 0; j--, position--, k++)
+		for (j = 0; j < len2; j++)
 		{
-			character1 = STR_TO_INT(ptr1[j]);
-			int_buffer = (character1 * character2) + STR_TO_INT(result[position]);
-			result = add_to_result(result, position, int_buffer);
+			mul[i + j] += (s1[i] - '0') * (s2[j] - '0');
 		}
-		position = total_length - l - 2;
 	}
-	result = rid_zeros(result, total_length);
-	print_answer(result);
-	free(result);
-	return (0);
+
+	for (i = 0; i < len1 + len2; i++)
+	{
+		tmp = mul[i] / 10;
+		mul[i] = mul[i] % 10;
+		mul[i + 1] = mul[i + 1] + tmp;
+	}
+}
+
+/**
+ * rev_string - This function reverses a string.
+ * @s: the string to be reversed
+ *
+ * Return: void
+ */
+void rev_string(char *s)
+{
+	char tmp1, tmp2;
+	int i, j;
+
+	i = _strlen(s) - 1;
+	j = 0;
+
+	while (i != j && j < i)
+	{
+		tmp1 = s[i];
+		tmp2 = s[j];
+		s[i] = tmp2;
+		s[j] = tmp1;
+		j++;
+		i--;
+	}
+}
+
+/**
+ * print_ans - Print the answer
+ * @mul: the product
+ *
+ * Return: void
+ */
+void print_ans(int *mul)
+{
+	int i, isZero;
+
+	isZero = 1;
+	for (i = 1023; i >= 0; i--)
+	{
+		if (mul[i] > 0)
+		{
+			isZero = 0;
+			break;
+		}
+	}
+	for (; i >= 0; i--)
+		printf("%d", mul[i]);
+	if (isZero == 1)
+		printf("0");
+	printf("\n");
 }

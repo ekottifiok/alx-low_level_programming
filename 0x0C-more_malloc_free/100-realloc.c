@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _realloc - reallocates a memory block using malloc
- * and free
- * @ptr: The pointer
- * @old_size: The old memory size
- * @new_size: The new memory size
+ * _realloc - reallocates the size of ptr
  *
- * Return: void pointer
+ * @ptr: pointer to the string
+ * @old_size: the old size of the pointer
+ * @new_size: new size of the pointer
+ * Return: void*
  */
+
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *new_ptr = NULL;
@@ -38,4 +38,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	free(ptr);
 	new_ptr = malloc(new_size);
 	return (new_ptr);
+}
+
+int main(int argc, char const *argv[])
+{
+	char *p;
+	p = malloc(sizeof(char) * 30);
+	p = _realloc(p, sizeof(char) * 30, sizeof(char) * 120);
+	return 0;
 }

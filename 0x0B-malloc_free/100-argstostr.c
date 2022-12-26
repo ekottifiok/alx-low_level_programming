@@ -1,43 +1,52 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * *argstostr - concatenates all the arguments of the program
- * @ac: number of arguments
- * @av: array of arguments
+ * argstostr - a function that concatenates all the arguments
+ * of your program.
+ * @ac: Argument count
+ * @av: The arguments
  *
- * Return: Pointer to the new string (Success), NULL (Error)
+ * Return: char pointer
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k, len;
-	char *str;
+	char *str = NULL;
+	int i, j, m, size;
 
-	if (ac == 0 || av == NULL)
-		return (NULL);
-
-	for (i = 0; i < ac; i++)
+	if (ac > 0 && av != NULL)
 	{
-		for (j = 0; av[i][j] != '\0'; j++)
-			len++;
-		len++;
-	}
+		size = 0;
+		for (i = 0; i < ac; i++)
+			size += _strlen(av[i]) + 1;
 
-	str = malloc(sizeof(char) * (len + 1));
-
-	if (str == NULL)
-		return (NULL);
-
-	for (i = 0, k = 0; i < ac; i++)
-	{
-		for (j = 0; av[i][j] != '\0'; j++)
+		str = malloc(size * sizeof(char) + 1);
+		if (str != NULL)
 		{
-			str[k] = av[i][j];
-			k++;
+			m = 0;
+			for (i = 0; i < ac; i++)
+			{
+				for (j = 0; av[i][j] != '\0'; j++, m++)
+					str[m] = av[i][j];
+				str[m++] = '\n';
+			}
 		}
-		str[k] = '\n';
-		k++;
 	}
 
 	return (str);
+}
+
+/**
+ * _strlen - This function returns the length of a string.
+ * @s: The string to return the length
+ *
+ * Return: Length of s
+ */
+int _strlen(char *s)
+{
+	long int len = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	return (len);
 }

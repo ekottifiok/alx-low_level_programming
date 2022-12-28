@@ -1,13 +1,58 @@
 {
 	"folders": [
 		{
+			"path": "0x05-pointers_arrays_strings"
+		},
+		{
+			"path": "0x0A-argc_argv"
+		},
+		{
+			"path": "0x0B-malloc_free"
+		},
+		{
+			"path": "0x0C-more_malloc_free"
+		},
+		{
+			"path": "0x0D-preprocessor"
+		},
+		{
+			"path": "0x0E-structures_typedef"
+		},
+		{
+			"path": "0x0F-function_pointers"
+		},
+		{
+			"path": "0x06-pointers_arrays_strings"
+		},
+		{
+			"path": "0x07-pointers_arrays_strings"
+		},
+		{
+			"path": "0x08-recursion"
+		},
+		{
 			"path": "0x09-static_libraries"
 		},
 		{
 			"path": "0x10-variadic_functions"
 		},
 		{
-			"path": "0x1C-makefiles"
+			"path": "0x12-singly_linked_lists"
+		},
+		{
+			"path": "0x13-more_singly_linked_lists"
+		},
+		{
+			"path": "0x14-bit_manipulation"
+		},
+		{
+			"path": "0x15-file_io"
+		},
+		{
+			"path": "0x17-doubly_linked_lists"
+		},
+		{
+			"path": "0x18-dynamic_libraries"
 		}
 	],
 	"settings": {}

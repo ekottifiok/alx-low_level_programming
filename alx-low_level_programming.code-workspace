@@ -53,7 +53,15 @@
 		},
 		{
 			"path": "0x18-dynamic_libraries"
+		},
+		{
+			"path": "0x1E-search_algorithms"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"*.html": "html",
+			"search_algos.h": "c"
+		}
+	}
 }

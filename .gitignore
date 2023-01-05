@@ -23,3 +23,6 @@ build/*
 0x1E-search_algorithms/100-jump
 0x1E-search_algorithms/*main.c
 0x1E-search_algorithms/103-exponential
+0x1E-search_algorithms/listint/
+0x1E-search_algorithms/105-jump
+0x1E-search_algorithms/105-jump_list

@@ -80,10 +80,10 @@ int value, int step, int flag_next_buffer)
  */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	int jump_step;
-
-	jump_step = sqrt((double)size);
+	int jump_step = sqrt((double)size);
 
 	/* if jump_linear is 0 then jump algo is used and when 1 is linear algo */
-	return (sub_jump_list(list, NULL, size, value, jump_step, 1));
+	if (list)
+		return (sub_jump_list(list, NULL, size, value, jump_step, 1));
+	return (NULL);
 }

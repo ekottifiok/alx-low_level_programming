@@ -21,3 +21,5 @@ build/*
 0x1E-search_algorithms/0-linear
 0x1E-search_algorithms/1-binary
 0x1E-search_algorithms/100-jump
+0x1E-search_algorithms/*main.c
+0x1E-search_algorithms/103-exponential

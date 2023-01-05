@@ -1,5 +1,5 @@
-#if !defined(SEARCH_ALGOS)
-#define SEARCH_ALGOS
+#ifndef SEARCH_ALGOS_H
+#define SEARCH_ALGOS_H
 
 /* NECESSARY IMPORTS */
 #include <stdio.h>
@@ -18,9 +18,9 @@
  */
 typedef struct listint_s
 {
-    int n;
-    size_t index;
-    struct listint_s *next;
+	int n;
+	size_t index;
+	struct listint_s *next;
 } listint_t;
 
 
@@ -36,10 +36,10 @@ typedef struct listint_s
  */
 typedef struct skiplist_s
 {
-    int n;
-    size_t index;
-    struct skiplist_s *next;
-    struct skiplist_s *express;
+	int n;
+	size_t index;
+	struct skiplist_s *next;
+	struct skiplist_s *express;
 } skiplist_t;
 
 
